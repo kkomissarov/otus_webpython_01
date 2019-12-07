@@ -16,12 +16,6 @@ def get_args():
         required=True
     )
 
-    parser.add_argument(
-            '-c',
-            '--count',
-            type=int,
-            help='Сколько ссылок нужно найти',
-        )
 
     parser.add_argument(
         '-r',
@@ -30,7 +24,7 @@ def get_args():
         action='store_true'
     )
 
-    parser.set_defaults(recursive=False, count=10)
+    parser.set_defaults(recursive=False)
     args = parser.parse_args()
 
     return args
